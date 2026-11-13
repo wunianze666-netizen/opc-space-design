@@ -459,6 +459,8 @@ def parser():
     p = sub.add_parser("campus", help="核对多建筑园区总平面并输出图纸")
     p.add_argument("project", type=Path)
     p.add_argument("--out", type=Path, required=True)
+    p.add_argument("--quality", choices=("quick", "studio"), default="quick")
+    p.add_argument("--blender", type=Path)
     p = sub.add_parser("generate", help="生成可核对的图纸、效果图、预算和方案包")
     p.add_argument("project", type=Path)
     p.add_argument("--out", type=Path, required=True)
@@ -511,7 +513,7 @@ def run(args):
         target = new_path(args.out)
         with tempfile.TemporaryDirectory(dir=target.parent, prefix=".spatial-campus-") as temporary:
             stage = Path(temporary) / "bundle"
-            result = generate(read_json(args.project), stage)
+            result = generate(read_json(args.project), stage, quality=args.quality, blender=args.blender)
             if target.exists():
                 raise InputError(f"输出路径已被其他任务使用：{target}")
             stage.rename(target)

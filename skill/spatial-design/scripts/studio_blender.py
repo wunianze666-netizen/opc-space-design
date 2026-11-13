@@ -311,6 +311,7 @@ def prepare_scene(path, settings, *, inside=False, keep_cutaway=False):
 
 def render(option, palette, camera, settings, destination, interior=None, textures=None, origin=None):
     scene = prepare_scene(destination / (option["id"] + ".png"), settings)
+    scene.view_settings.exposure = settings.get("exposure_stops", 0)
     if origin is not None:
         scene["opc_origin_mm"] = origin
     build_model(option["faces"], palette, interior)
@@ -321,7 +322,7 @@ def render(option, palette, camera, settings, destination, interior=None, textur
     bpy.context.object.name = "Presentation backdrop"
     bpy.context.object.data.materials.append(material(BACKDROP, "backdrop", "wood"))
     target = Vector((0, 0, 0))
-    energy = span ** 2
+    energy = span ** 2 * settings.get("lighting_factor", 1)
     light("Warm key", Vector((-.38, -.27, .71)) * span, target, 21 * energy, .55 * span, (1, .94, .84))
     light("Cool fill", Vector((.49, .22, .58)) * span, target, 9 * energy, .57 * span, (.82, .91, 1))
     light("Edge light", Vector((-.09, .49, .47)) * span, target, 7 * energy, .43 * span, (1, .98, .93))
