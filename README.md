@@ -1,6 +1,6 @@
-# OPC 空间设计
+# 空间设计 Spatial Design
 
-给一张平面图，说清谁用、要保留什么、最想改善什么。Skill 会整理设计方向，按确认过的几何生成平面、同坐标三维和逐件摆放资料。适合单层办公、住宅、零售及展陈的空间方案。
+给一张平面图，说清谁用、要保留什么、最想改善什么。Skill 会整理设计方向，按确认过的几何生成平面、同坐标三维和逐件摆放资料。支持办公、住宅、零售及多建筑园区的空间方案。
 
 ![同一套住宅的两种墙地设计](docs/design-study.png)
 
@@ -8,7 +8,7 @@
 
 ## 安装与试用
 
-从 [Releases](https://github.com/wunianze666-netizen/opc-space-design/releases/latest) 下载 `opc-space-design.zip`，把解压后的 `opc-space-design` 整个目录放入 Agent 的 Skill 目录。
+从 [Releases](https://github.com/wunianze666-netizen/opc-space-design/releases/latest) 下载 `spatial-design.zip`，把解压后的 `spatial-design` 整个目录放入 Agent 的 Skill 目录。旧版 `opc-space-design` 的 v1.0.0 文件仍可从对应历史版本获取。
 
 | 宿主 | 项目内目录 |
 | --- | --- |
@@ -17,9 +17,13 @@
 | Gemini CLI | `.gemini/skills/` |
 | Cursor | `.cursor/skills/` |
 
-完整入口和能力差异见[宿主兼容说明](skill/opc-space-design/references/portable-hosts.md)。在 Skill 目录用 Python 3.11 或以上安装 `requirements.txt`。中文出图需可用的中文字体。默认本地出图可在没有生图接口、模型密钥或 Blender 的环境运行。安装后可按[示例命令](skill/opc-space-design/examples/tidal-room/README.md)复现上图。
+完整入口和能力差异见[宿主兼容说明](skill/spatial-design/references/portable-hosts.md)。在 Skill 目录用 Python 3.11 或以上安装 `requirements.txt`。中文出图需可用的中文字体。默认本地出图可在没有生图接口、模型密钥或 Blender 的环境运行。安装后可按[示例命令](skill/spatial-design/examples/tidal-room/README.md)复现上图。
 
-> 用 $opc-space-design 看这张图。我需要给 12 人做办公区，保留原门窗。来客经常看产品样品，员工要安静开会。请推荐一套，并给两种有区别的设计方向。交付整区三维、重点局部和逐件摆放表。
+> 用 $spatial-design 看这张图。我需要给 12 人做办公区，保留原门窗。来客经常看产品样品，员工要安静开会。请推荐一套，并给两种有区别的设计方向。交付整区三维、重点局部和逐件摆放表。
+
+## 多建筑园区
+
+[园区总平面示例](docs/campus-plan.png)和[建筑体量三维](docs/campus-volume.png)使用 8,000 m² 合成场地。可输入地块边界、建筑、入口、路径和功能区，输出同坐标 PNG、毫米 DXF 和入口连通检查。路径断开会显示待调整。室内单层几何计算范围是 2,500 m²、跨度 90 m、最多 200 个工位。多栋或多层需要逐层深化。[园区使用方法](skill/spatial-design/references/campus.md)
 
 ## 怎样交付给委托方
 
@@ -27,7 +31,7 @@
 - **继续用 Agent 设计**：发仓库链接和 Skill ZIP，附一句使用说明。项目图纸和客户资产放在双方约定的交付渠道。
 - **照图摆放**：先确认总览的 A、B 和现场图纸方向，再按表量取。图纸缺关键尺寸时先出设计方向和补测项。涉及结构、机电、消防和固定安装时按项目现场复核。
 
-[设计与出图流程](skill/opc-space-design/SKILL.md) · [交付文件说明](skill/opc-space-design/references/design-delivery.md) · [原创设计与本地绘图](skill/opc-space-design/references/creative-direction.md)
+[设计与出图流程](skill/spatial-design/SKILL.md) · [交付文件说明](skill/spatial-design/references/design-delivery.md) · [原创设计与本地绘图](skill/spatial-design/references/creative-direction.md)
 
 ## 验证范围
 

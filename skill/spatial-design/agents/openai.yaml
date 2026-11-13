@@ -1,0 +1,4 @@
+interface:
+  display_name: "空间设计"
+  short_description: "听懂空间需求，讨论设计方向、推荐布局并生成可核查的图纸与清单"
+  default_prompt: "用 $spatial-design 根据我的需求和图纸，给出空间设计方向、布局和可核对的图纸。"

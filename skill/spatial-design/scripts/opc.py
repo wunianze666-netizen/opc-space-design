@@ -435,7 +435,7 @@ def presentation_arguments(command):
 
 
 def parser():
-    command = argparse.ArgumentParser(description="OPC 空间设计。几何、绘图和方案导出")
+    command = argparse.ArgumentParser(description="空间设计。几何、绘图和方案导出")
     sub = command.add_subparsers(dest="command", required=True)
     p = sub.add_parser("inspect", help="检查输入文件及图层，或生成图像预览")
     p.add_argument("source", type=Path)
@@ -456,6 +456,9 @@ def parser():
     p.add_argument("--out", type=Path, required=True)
     p = sub.add_parser("analyze", help="求解并复核，不生成方案文件")
     p.add_argument("project", type=Path)
+    p = sub.add_parser("campus", help="核对多建筑园区总平面并输出图纸")
+    p.add_argument("project", type=Path)
+    p.add_argument("--out", type=Path, required=True)
     p = sub.add_parser("generate", help="生成可核对的图纸、效果图、预算和方案包")
     p.add_argument("project", type=Path)
     p.add_argument("--out", type=Path, required=True)
@@ -503,6 +506,16 @@ def parser():
 
 def run(args):
     name = args.command
+    if name == "campus":
+        from campus import generate
+        target = new_path(args.out)
+        with tempfile.TemporaryDirectory(dir=target.parent, prefix=".spatial-campus-") as temporary:
+            stage = Path(temporary) / "bundle"
+            result = generate(read_json(args.project), stage)
+            if target.exists():
+                raise InputError(f"输出路径已被其他任务使用：{target}")
+            stage.rename(target)
+        return {**result, "out": str(target)}
     if name == "inspect":
         return inspect(args.source, new_path(args.preview) if args.preview else None, args.page)
     if name == "import-dxf":

@@ -6,12 +6,12 @@
 
 | 宿主 | 项目内或本机用户级目录 | 启用方式 |
 | --- | --- | --- |
-| Codex | `.agents/skills/` 或 `~/.agents/skills/` | 在会话里输入 `$opc-space-design`，或描述匹配任务。 [Codex 文档](https://developers.openai.com/codex/skills) |
-| Claude Code | `.claude/skills/` 或 `~/.claude/skills/` | 在会话里输入 `/opc-space-design`，或描述匹配任务。 [Claude Code 文档](https://code.claude.com/docs/en/skills) |
+| Codex | `.agents/skills/` 或 `~/.agents/skills/` | 在会话里输入 `$spatial-design`，或描述匹配任务。 [Codex 文档](https://developers.openai.com/codex/skills) |
+| Claude Code | `.claude/skills/` 或 `~/.claude/skills/` | 在会话里输入 `/spatial-design`，或描述匹配任务。 [Claude Code 文档](https://code.claude.com/docs/en/skills) |
 | Gemini CLI | `.gemini/skills/`、`~/.gemini/skills/`，也支持对应的 `.agents/skills/` | 用 `gemini skills list` 检查发现情况，在会话中点名技能并描述任务。 [Gemini CLI 文档](https://geminicli.com/docs/cli/using-agent-skills/) |
 | Cursor | `.cursor/skills/`、`~/.cursor/skills/`，也支持对应的 `.agents/skills/` | 在 Agent 会话里选用已加载的技能，或描述匹配任务。 [Cursor 文档](https://cursor.com/docs/skills) |
 
-将解压后的完整 `opc-space-design` 目录放入对应位置。需要计算和导出的环境还需具备 [项目输入](project-input.md) 所列的 Python 和依赖。中文出图依赖可用的中文字体，必要时将 `OPC_FONT` 指向已安装的 TTF/TTC。安装、权限、文件可见范围和执行能力以所用客户端及其版本为准。云端和远程会话需要将技能、依赖和图纸放在该会话能访问的环境中。
+将解压后的完整 `spatial-design` 目录放入对应位置。需要计算和导出的环境还需具备 [项目输入](project-input.md) 所列的 Python 和依赖。中文出图依赖可用的中文字体，必要时将 `OPC_FONT` 指向已安装的 TTF/TTC。安装、权限、文件可见范围和执行能力以所用客户端及其版本为准。云端和远程会话需要将技能、依赖和图纸放在该会话能访问的环境中。
 
 ## 根据当前能力交付
 
