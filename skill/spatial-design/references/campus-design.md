@@ -18,6 +18,6 @@
 
 ## 交叉案例
 
-[科技展研](../examples/campus/styles/tech.json)、[生态疗愈](../examples/campus/styles/nature.json)、[社区学习](../examples/campus/styles/community.json)采用不同面积和三类假设需求。三份均为合成案例，有 20 件含角落的设施、三栋建筑和分区路径。运行 `python examples/campus/check_detail.py` 验证尺寸、DXF、操作点和异常输入。实际项目应根据不同用户和底图重新选择，不应照搬样例坐标。
+[科技展研](../examples/campus/styles/tech.json)、[生态疗愈](../examples/campus/styles/nature.json)、[社区学习](../examples/campus/styles/community.json)采用不同面积和三类假设需求。另有工业创客、文化工坊和简静办公三组从前三套调整尺度与用途的对照。六份均为合成案例，每套包含 20 件设施和三栋建筑。运行 `python examples/campus/check_detail.py` 验证尺寸、DXF、操作点和异常输入。实际项目应根据不同用户和底图重新选择，不应照搬样例坐标。
 
 研究园区体验时，可参考设计方关于入口、交流、生态和遮荫的公开项目资料。例如信阳学院南湾校区入口整合户外学习、休闲与雨水景观，SWA 的 The Landing 设置可集会广场和半私密庭院。项目做法需依据本场地的数据与所在地区要求判断。[信阳学院南湾校区](https://www.sasaki.com/projects/xinyang-university-south-bay-campus-gateway-landscape/) · [The Landing](https://www.swagroup.com/projects/the-landing/)

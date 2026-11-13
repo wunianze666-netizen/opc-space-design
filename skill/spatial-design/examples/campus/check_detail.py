@@ -29,7 +29,8 @@ def shifted(polygon, x, y):
 def main(folder):
     summaries = {}
     images = []
-    cases = (("tech", 8000), ("nature", 9600), ("community", 6400))
+    cases = (("tech", 8000), ("nature", 9600), ("community", 6400),
+             ("industrial", 8800), ("culture", 8000), ("quiet", 8640))
     for name, area in cases:
         raw = json.loads((HERE / "styles" / f"{name}.json").read_text(encoding="utf-8"))
         result, target = invoke(folder, name, raw)
@@ -66,7 +67,8 @@ def main(folder):
             assert len(doc.modelspace().query('LWPOLYLINE[layer=="FEATURE_PARTS"]')) == 3
         summaries[name] = {"area_m2": area, "buildings": len(result["buildings"]), "features": len(rows),
                            "pages": 4}
-    assert all(ImageChops.difference(images[i], images[j]).getbbox() for i in range(3) for j in range(i + 1, 3))
+    assert all(ImageChops.difference(images[i], images[j]).getbbox()
+               for i in range(len(images)) for j in range(i + 1, len(images)))
     raw = json.loads((HERE / "styles/tech.json").read_text(encoding="utf-8"))
     tests = []
     bad = deepcopy(raw)
