@@ -1,0 +1,231 @@
+{
+  "schema": 1,
+  "title": "样品协作与接待办公室",
+  "geometry": {
+    "unit": "mm",
+    "source": "独立交叉验证用合成办公户型",
+    "confirmed": true,
+    "exits": [
+      {
+        "name": "访客主入口",
+        "segment": [
+          [
+            1200,
+            0
+          ],
+          [
+            2800,
+            0
+          ]
+        ]
+      }
+    ],
+    "outline": [
+      [
+        0,
+        0
+      ],
+      [
+        16400,
+        0
+      ],
+      [
+        16400,
+        9400
+      ],
+      [
+        12400,
+        9400
+      ],
+      [
+        12400,
+        11100
+      ],
+      [
+        0,
+        11100
+      ]
+    ],
+    "ceiling_mm": 2850,
+    "keep_clear": [
+      {
+        "name": "门扇活动区",
+        "kind": "door_swing",
+        "polygon": [
+          [
+            1000,
+            0
+          ],
+          [
+            3000,
+            0
+          ],
+          [
+            3000,
+            1450
+          ],
+          [
+            1000,
+            1450
+          ]
+        ]
+      }
+    ],
+    "fixed": [
+      {
+        "name": "结构柱",
+        "kind": "column",
+        "polygon": [
+          [
+            7950,
+            5300
+          ],
+          [
+            8450,
+            5300
+          ],
+          [
+            8450,
+            5800
+          ],
+          [
+            7950,
+            5800
+          ]
+        ]
+      },
+      {
+        "name": "不可移茶水立管区",
+        "kind": "service",
+        "polygon": [
+          [
+            14200,
+            7300
+          ],
+          [
+            15700,
+            7300
+          ],
+          [
+            15700,
+            8600
+          ],
+          [
+            14200,
+            8600
+          ]
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "name": "北侧采光带",
+        "segment": [
+          [
+            1400,
+            11100
+          ],
+          [
+            11200,
+            11100
+          ]
+        ]
+      }
+    ]
+  },
+  "requirements": {
+    "aisle_mm": 1050,
+    "exit_min_mm": 1200,
+    "options": 3,
+    "style": "工业创客",
+    "budget_mode": "cap",
+    "budget_limit_cny": 130000,
+    "desks": 6,
+    "storage": 1,
+    "furniture": [
+      {
+        "kind": "workshop",
+        "name": "双面创客工作台",
+        "count": 1,
+        "width_mm": 2200,
+        "depth_mm": 850,
+        "height_mm": 910,
+        "access_mm": 850,
+        "access_sides": 2,
+        "unit_price_cny": 3850
+      },
+      {
+        "kind": "planter",
+        "name": "室内绿植槽",
+        "count": 1,
+        "width_mm": 1100,
+        "depth_mm": 380,
+        "height_mm": 780,
+        "access_mm": 450,
+        "access_sides": 1,
+        "unit_price_cny": 550
+      },
+      {
+        "kind": "focus_pod",
+        "unit_price_cny": 5800
+      },
+      {
+        "kind": "gallery",
+        "unit_price_cny": 1720
+      }
+    ],
+    "priorities": [
+      "focus",
+      "visitor",
+      "comfort"
+    ],
+    "zones": [
+      {
+        "use": "workshop",
+        "polygon": [
+          [
+            4920,
+            400
+          ],
+          [
+            15853,
+            400
+          ],
+          [
+            15853,
+            6250
+          ],
+          [
+            4920,
+            6250
+          ]
+        ]
+      }
+    ],
+    "lounge": 0,
+    "meeting_seats": [
+      4
+    ],
+    "visitor_entries": [
+      "访客主入口"
+    ]
+  },
+  "prices": {
+    "source": "交叉验证用合成单价",
+    "date": "2026-11-12",
+    "unit_prices": {
+      "desk": 950,
+      "office_chair": 650,
+      "screen": 580,
+      "meeting_table_4": 1500,
+      "meeting_table_6": 2600,
+      "meeting_table_8": 3400,
+      "meeting_chair": 390,
+      "pantry": 2100,
+      "storage": 1000,
+      "sofa": 2600,
+      "coffee_table": 560,
+      "flooring_m2": 130
+    }
+  }
+}

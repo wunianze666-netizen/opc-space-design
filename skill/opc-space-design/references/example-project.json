@@ -1,0 +1,138 @@
+{
+  "schema": 1,
+  "title": "青筑共享办公",
+  "geometry": {
+    "unit": "mm",
+    "source": "合成验证户型，尺寸为测试输入",
+    "confirmed": true,
+    "outline": [
+      [
+        0,
+        0
+      ],
+      [
+        16600,
+        0
+      ],
+      [
+        16600,
+        11200
+      ],
+      [
+        0,
+        11200
+      ]
+    ],
+    "fixed": [
+      {
+        "name": "保留柱",
+        "kind": "column",
+        "polygon": [
+          [
+            8300,
+            5100
+          ],
+          [
+            8800,
+            5100
+          ],
+          [
+            8800,
+            5600
+          ],
+          [
+            8300,
+            5600
+          ]
+        ]
+      }
+    ],
+    "keep_clear": [
+      {
+        "name": "入口净空",
+        "kind": "door_swing",
+        "polygon": [
+          [
+            850,
+            0
+          ],
+          [
+            2400,
+            0
+          ],
+          [
+            2400,
+            1450
+          ],
+          [
+            850,
+            1450
+          ]
+        ]
+      }
+    ],
+    "exits": [
+      {
+        "name": "南入口",
+        "segment": [
+          [
+            950,
+            0
+          ],
+          [
+            2300,
+            0
+          ]
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "name": "北侧长窗",
+        "segment": [
+          [
+            2988.0,
+            11200
+          ],
+          [
+            13612.0,
+            11200
+          ]
+        ]
+      }
+    ],
+    "ceiling_mm": 2850
+  },
+  "requirements": {
+    "desks": 16,
+    "meeting_seats": [
+      6
+    ],
+    "pantry": 1,
+    "storage": 2,
+    "lounge": 1,
+    "aisle_mm": 1100,
+    "options": 3,
+    "style": "自然木色",
+    "budget_limit_cny": 90000,
+    "budget_mode": "reference"
+  },
+  "prices": {
+    "source": "测试用虚拟价目表，非市场报价",
+    "date": "2026-11-11",
+    "unit_prices": {
+      "desk": 950,
+      "office_chair": 650,
+      "screen": 580,
+      "meeting_table_4": 1500,
+      "meeting_table_6": 2600,
+      "meeting_table_8": 3400,
+      "meeting_chair": 390,
+      "pantry": 2100,
+      "storage": 1000,
+      "sofa": 2600,
+      "coffee_table": 560,
+      "flooring_m2": 130
+    }
+  }
+}

@@ -1,0 +1,376 @@
+{
+  "schema": 1,
+  "title": "坡地茶室",
+  "geometry": {
+    "unit": "mm",
+    "source": "合成住宅示例。尺寸、结构和单价用于复现测试",
+    "confirmed": true,
+    "ceiling_mm": 2800,
+    "outline": [
+      [
+        0,
+        0
+      ],
+      [
+        9400,
+        0
+      ],
+      [
+        9400,
+        4900
+      ],
+      [
+        7500,
+        4900
+      ],
+      [
+        7500,
+        7400
+      ],
+      [
+        0,
+        7400
+      ]
+    ],
+    "fixed": [
+      {
+        "kind": "wall",
+        "name": "保留隔墙",
+        "polygon": [
+          [
+            0,
+            4290
+          ],
+          [
+            4450,
+            4290
+          ],
+          [
+            4450,
+            4450
+          ],
+          [
+            0,
+            4450
+          ]
+        ]
+      },
+      {
+        "kind": "service",
+        "name": "固定厨卫区",
+        "polygon": [
+          [
+            7350,
+            0
+          ],
+          [
+            9400,
+            0
+          ],
+          [
+            9400,
+            2400
+          ],
+          [
+            7350,
+            2400
+          ]
+        ]
+      }
+    ],
+    "keep_clear": [
+      {
+        "kind": "door_swing",
+        "name": "入户门净空",
+        "polygon": [
+          [
+            900,
+            0
+          ],
+          [
+            2250,
+            0
+          ],
+          [
+            2250,
+            1300
+          ],
+          [
+            900,
+            1300
+          ]
+        ]
+      }
+    ],
+    "exits": [
+      {
+        "name": "入户门",
+        "segment": [
+          [
+            1000,
+            0
+          ],
+          [
+            2200,
+            0
+          ]
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "name": "北侧窗",
+        "segment": [
+          [
+            1400,
+            7400
+          ],
+          [
+            5650,
+            7400
+          ]
+        ]
+      },
+      {
+        "name": "东侧窗",
+        "segment": [
+          [
+            9400,
+            2670
+          ],
+          [
+            9400,
+            4180
+          ]
+        ]
+      }
+    ]
+  },
+  "requirements": {
+    "aisle_mm": 900,
+    "exit_min_mm": 900,
+    "options": 1,
+    "style": "自然木色",
+    "priorities": [
+      "privacy",
+      "comfort"
+    ],
+    "lounge": 1,
+    "storage": 1,
+    "furniture": [
+      {
+        "kind": "bed",
+        "name": "双侧通行双人床",
+        "width_mm": 1600,
+        "depth_mm": 2000,
+        "access_mm": 700,
+        "access_sides": 2,
+        "unit_price_cny": 2800,
+        "color_hex": "#D5CEC0"
+      },
+      {
+        "kind": "dining",
+        "name": "四座餐桌椅组合",
+        "width_mm": 1400,
+        "depth_mm": 800,
+        "unit_price_cny": 2400,
+        "color_hex": "#B8AA96"
+      },
+      {
+        "kind": "wardrobe",
+        "name": "睡眠区移门衣柜",
+        "count": 1,
+        "width_mm": 1500,
+        "depth_mm": 580,
+        "height_mm": 2120,
+        "access_mm": 750,
+        "placement": {
+          "x": 100,
+          "y": 5220,
+          "angle": 90
+        },
+        "color_hex": "#DED7CB"
+      }
+    ],
+    "zones": [
+      {
+        "use": "bed",
+        "polygon": [
+          [
+            0,
+            4510
+          ],
+          [
+            7500,
+            4510
+          ],
+          [
+            7500,
+            7400
+          ],
+          [
+            0,
+            7400
+          ]
+        ]
+      },
+      {
+        "use": "dining",
+        "polygon": [
+          [
+            0,
+            0
+          ],
+          [
+            7350,
+            0
+          ],
+          [
+            7350,
+            4250
+          ],
+          [
+            0,
+            4250
+          ]
+        ]
+      }
+    ],
+    "required_approaches": [
+      {
+        "name": "原厨卫区外侧复核点",
+        "point": [
+          6900,
+          2670
+        ],
+        "entry": "入户门"
+      }
+    ],
+    "interior": {
+      "concept": "坡地茶室",
+      "description": "以层叠田埂和赭色日盘组织墙面。错缝暖木地面从起居展开，餐桌保留一盏低对比线灯。",
+      "elements": [
+        {
+          "name": "错缝暖橡木",
+          "kind": "floor_finish",
+          "material": "minimal_oat",
+          "polygon": [
+            [
+              170,
+              1400
+            ],
+            [
+              2862,
+              1400
+            ],
+            [
+              2862,
+              4070
+            ],
+            [
+              170,
+              4070
+            ]
+          ]
+        },
+        {
+          "name": "餐桌暖光线灯",
+          "kind": "ceiling_light",
+          "material": "warm_light",
+          "polygon": [
+            [
+              5070,
+              2520
+            ],
+            [
+              5154,
+              2520
+            ],
+            [
+              5154,
+              3670
+            ],
+            [
+              5070,
+              3670
+            ]
+          ],
+          "bottom_mm": 2360,
+          "top_mm": 2410
+        },
+        {
+          "name": "入户信件与提醒板",
+          "kind": "notice_board",
+          "material": "minimal_cork",
+          "segment": [
+            [
+              2470,
+              0
+            ],
+            [
+              3330,
+              0
+            ]
+          ],
+          "depth_mm": 40,
+          "bottom_mm": 1100,
+          "top_mm": 1750
+        },
+        {
+          "name": "赭日与坡地 · 整幅墙图",
+          "kind": "art",
+          "material": "minimal_linen",
+          "segment": [
+            [
+              0,
+              2110
+            ],
+            [
+              0,
+              3370
+            ]
+          ],
+          "depth_mm": 54,
+          "bottom_mm": 1100,
+          "top_mm": 2000
+        }
+      ],
+      "view": {
+        "eye_mm": [
+          2910,
+          3050,
+          1550
+        ],
+        "target_mm": [
+          3520,
+          430,
+          1320
+        ]
+      },
+      "materials": {
+        "minimal_oat": {
+          "name": "错缝暖橡木",
+          "color": "#bb9c7e"
+        },
+        "minimal_linen": {
+          "name": "赭日与坡地 · 整幅墙图",
+          "color": "#e6dbbd"
+        },
+        "minimal_cork": {
+          "name": "浅砂软木",
+          "color": "#BEA58B"
+        }
+      }
+    }
+  },
+  "prices": {
+    "source": "合成示例价目表",
+    "date": "2026-11-12",
+    "unit_prices": {
+      "storage": 920,
+      "sofa": 2200,
+      "coffee_table": 430,
+      "flooring_m2": 115
+    }
+  }
+}

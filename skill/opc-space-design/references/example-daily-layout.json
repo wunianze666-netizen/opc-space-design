@@ -1,0 +1,127 @@
+[
+  {
+    "strategy": "open",
+    "placements": [
+      {
+        "type": "pantry",
+        "x": 23512,
+        "y": 512,
+        "angle": 270
+      },
+      {
+        "type": "storage",
+        "x": 26688,
+        "y": 2512,
+        "angle": 270
+      },
+      {
+        "type": "lounge",
+        "x": 8512,
+        "y": 2512,
+        "angle": 0
+      },
+      {
+        "type": "furniture_3",
+        "x": 16012,
+        "y": 4012,
+        "angle": 270
+      },
+      {
+        "type": "furniture_1",
+        "x": 4012,
+        "y": 3012,
+        "angle": 90
+      },
+      {
+        "type": "furniture_4",
+        "x": 19512,
+        "y": 18012,
+        "angle": 270
+      },
+      {
+        "type": "furniture_2",
+        "x": 10012,
+        "y": 6512,
+        "angle": 0
+      },
+      {
+        "type": "furniture_2",
+        "x": 7512,
+        "y": 6512,
+        "angle": 0
+      },
+      {
+        "type": "desk4",
+        "x": 8012,
+        "y": 14412,
+        "angle": 90
+      },
+      {
+        "type": "desk4",
+        "x": 8012,
+        "y": 10212,
+        "angle": 90
+      },
+      {
+        "type": "desk4",
+        "x": 3812,
+        "y": 14412,
+        "angle": 90
+      },
+      {
+        "type": "desk2",
+        "x": 3812,
+        "y": 11612,
+        "angle": 90
+      },
+      {
+        "type": "desk4",
+        "x": 22312,
+        "y": 13512,
+        "angle": 90
+      },
+      {
+        "type": "desk4",
+        "x": 22312,
+        "y": 9312,
+        "angle": 90
+      },
+      {
+        "type": "desk4",
+        "x": 18112,
+        "y": 13512,
+        "angle": 90
+      },
+      {
+        "type": "desk2",
+        "x": 18112,
+        "y": 10712,
+        "angle": 90
+      },
+      {
+        "type": "furniture_5",
+        "x": 10120,
+        "y": 135,
+        "angle": 180
+      },
+      {
+        "type": "furniture_6",
+        "x": 8130,
+        "y": 1190,
+        "angle": 0
+      },
+      {
+        "type": "furniture_7",
+        "x": 21450,
+        "y": 160,
+        "angle": 180
+      },
+      {
+        "type": "furniture_8",
+        "x": 20400,
+        "y": 160,
+        "angle": 180
+      }
+    ]
+  }
+]

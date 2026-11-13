@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "title": "临窗公寓 · 起居与睡眠",
+  "geometry": {
+    "unit": "mm",
+    "source": "合成住宅示例。尺寸、结构和单价用于复现测试",
+    "confirmed": true,
+    "ceiling_mm": 2800,
+    "outline": [[0,0],[9400,0],[9400,4900],[7500,4900],[7500,7400],[0,7400]],
+    "fixed": [
+      {"kind":"wall","name":"保留隔墙","polygon":[[0,4290],[4450,4290],[4450,4450],[0,4450]]},
+      {"kind":"service","name":"固定厨卫区","polygon":[[7350,0],[9400,0],[9400,2400],[7350,2400]]}
+    ],
+    "keep_clear": [{"kind":"door_swing","name":"入户门净空","polygon":[[900,0],[2250,0],[2250,1300],[900,1300]]}],
+    "exits": [{"name":"入户门","segment":[[1000,0],[2200,0]]}],
+    "windows": [
+      {"name":"北侧窗","segment":[[1400,7400],[5650,7400]]},
+      {"name":"东侧窗","segment":[[9400,2670],[9400,4180]]}
+    ]
+  },
+  "requirements": {
+    "aisle_mm": 900,
+    "exit_min_mm": 900,
+    "options": 3,
+    "style": "自然木色",
+    "priorities": ["privacy","comfort"],
+    "lounge": 1,
+    "storage": 1,
+    "furniture": [
+      {"kind":"bed","name":"双侧通行双人床","width_mm":1600,"depth_mm":2000,"access_mm":700,"access_sides":2,"unit_price_cny":2800},
+      {"kind":"dining","name":"四座餐桌椅组合","width_mm":1400,"depth_mm":800,"unit_price_cny":2400}
+    ],
+    "zones": [
+      {"use":"bed","polygon":[[0,4510],[7500,4510],[7500,7400],[0,7400]]},
+      {"use":"dining","polygon":[[0,0],[7350,0],[7350,4250],[0,4250]]}
+    ]
+  },
+  "prices": {
+    "source": "合成示例价目表",
+    "date": "2026-11-12",
+    "unit_prices": {"storage":920,"sofa":2200,"coffee_table":430,"flooring_m2":115}
+  }
+}

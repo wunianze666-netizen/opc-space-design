@@ -1,0 +1,396 @@
+{
+  "schema": 1,
+  "title": "夜航小宅",
+  "geometry": {
+    "unit": "mm",
+    "source": "合成住宅示例。尺寸、结构和单价用于复现测试",
+    "confirmed": true,
+    "ceiling_mm": 2800,
+    "outline": [
+      [
+        0,
+        0
+      ],
+      [
+        9400,
+        0
+      ],
+      [
+        9400,
+        4900
+      ],
+      [
+        7500,
+        4900
+      ],
+      [
+        7500,
+        7400
+      ],
+      [
+        0,
+        7400
+      ]
+    ],
+    "fixed": [
+      {
+        "kind": "wall",
+        "name": "保留隔墙",
+        "polygon": [
+          [
+            0,
+            4290
+          ],
+          [
+            4450,
+            4290
+          ],
+          [
+            4450,
+            4450
+          ],
+          [
+            0,
+            4450
+          ]
+        ]
+      },
+      {
+        "kind": "service",
+        "name": "固定厨卫区",
+        "polygon": [
+          [
+            7350,
+            0
+          ],
+          [
+            9400,
+            0
+          ],
+          [
+            9400,
+            2400
+          ],
+          [
+            7350,
+            2400
+          ]
+        ]
+      }
+    ],
+    "keep_clear": [
+      {
+        "kind": "door_swing",
+        "name": "入户门净空",
+        "polygon": [
+          [
+            900,
+            0
+          ],
+          [
+            2250,
+            0
+          ],
+          [
+            2250,
+            1300
+          ],
+          [
+            900,
+            1300
+          ]
+        ]
+      }
+    ],
+    "exits": [
+      {
+        "name": "入户门",
+        "segment": [
+          [
+            1000,
+            0
+          ],
+          [
+            2200,
+            0
+          ]
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "name": "北侧窗",
+        "segment": [
+          [
+            1400,
+            7400
+          ],
+          [
+            5650,
+            7400
+          ]
+        ]
+      },
+      {
+        "name": "东侧窗",
+        "segment": [
+          [
+            9400,
+            2670
+          ],
+          [
+            9400,
+            4180
+          ]
+        ]
+      }
+    ]
+  },
+  "requirements": {
+    "aisle_mm": 900,
+    "exit_min_mm": 900,
+    "options": 1,
+    "style": "科技感",
+    "priorities": [
+      "privacy",
+      "comfort"
+    ],
+    "lounge": 1,
+    "storage": 1,
+    "furniture": [
+      {
+        "kind": "bed",
+        "name": "双侧通行双人床",
+        "width_mm": 1600,
+        "depth_mm": 2000,
+        "access_mm": 700,
+        "access_sides": 2,
+        "unit_price_cny": 2800,
+        "color_hex": "#596477"
+      },
+      {
+        "kind": "dining",
+        "name": "四座餐桌椅组合",
+        "width_mm": 1400,
+        "depth_mm": 800,
+        "unit_price_cny": 2400,
+        "color_hex": "#445466"
+      },
+      {
+        "kind": "wardrobe",
+        "name": "睡眠区移门衣柜",
+        "count": 1,
+        "width_mm": 1500,
+        "depth_mm": 580,
+        "height_mm": 2120,
+        "access_mm": 750,
+        "placement": {
+          "x": 100,
+          "y": 5220,
+          "angle": 90
+        },
+        "color_hex": "#677481"
+      },
+      {
+        "kind": "equipment",
+        "name": "带理线位的数码边柜",
+        "count": 1,
+        "width_mm": 1000,
+        "depth_mm": 360,
+        "height_mm": 720,
+        "access_mm": 680,
+        "placement": {
+          "x": 7950,
+          "y": 3480,
+          "angle": 0
+        },
+        "color_hex": "#344B63"
+      }
+    ],
+    "zones": [
+      {
+        "use": "bed",
+        "polygon": [
+          [
+            0,
+            4510
+          ],
+          [
+            7500,
+            4510
+          ],
+          [
+            7500,
+            7400
+          ],
+          [
+            0,
+            7400
+          ]
+        ]
+      },
+      {
+        "use": "dining",
+        "polygon": [
+          [
+            0,
+            0
+          ],
+          [
+            7350,
+            0
+          ],
+          [
+            7350,
+            4250
+          ],
+          [
+            0,
+            4250
+          ]
+        ]
+      }
+    ],
+    "required_approaches": [
+      {
+        "name": "原厨卫区外侧复核点",
+        "point": [
+          6900,
+          2670
+        ],
+        "entry": "入户门"
+      }
+    ],
+    "interior": {
+      "concept": "夜航小宅",
+      "description": "灰地和低反光墙面压低客厅的视觉杂乱，餐区保留暖色照明。东侧转角放下充电和临时理线的窄柜，原厨卫及夜间动线保留。",
+      "elements": [
+        {
+          "name": "起居区浅雾灰地面",
+          "kind": "floor_finish",
+          "material": "tech_gray",
+          "polygon": [
+            [
+              170,
+              1400
+            ],
+            [
+              2862,
+              1400
+            ],
+            [
+              2862,
+              4070
+            ],
+            [
+              170,
+              4070
+            ]
+          ]
+        },
+        {
+          "name": "餐桌暖光线灯",
+          "kind": "ceiling_light",
+          "material": "warm_light",
+          "polygon": [
+            [
+              5070,
+              2520
+            ],
+            [
+              5154,
+              2520
+            ],
+            [
+              5154,
+              3670
+            ],
+            [
+              5070,
+              3670
+            ]
+          ],
+          "bottom_mm": 2360,
+          "top_mm": 2410
+        },
+        {
+          "name": "东转角暗钴蓝吸声墙",
+          "kind": "acoustic",
+          "material": "tech_blue",
+          "segment": [
+            [
+              7800,
+              4900
+            ],
+            [
+              9220,
+              4900
+            ]
+          ],
+          "depth_mm": 66,
+          "bottom_mm": 960,
+          "top_mm": 2350
+        },
+        {
+          "name": "餐区深灰地面",
+          "kind": "floor_finish",
+          "material": "tech_graphite",
+          "polygon": [
+            [
+              3862,
+              2400
+            ],
+            [
+              6362,
+              2400
+            ],
+            [
+              6362,
+              3800
+            ],
+            [
+              3862,
+              3800
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "eye_mm": [
+          3220,
+          1640,
+          1570
+        ],
+        "target_mm": [
+          6450,
+          3510,
+          1260
+        ]
+      },
+      "materials": {
+        "tech_gray": {
+          "name": "浅雾灰地面",
+          "color": "#A8B0B4"
+        },
+        "tech_blue": {
+          "name": "暗钴蓝吸声饰面",
+          "color": "#305878"
+        },
+        "tech_graphite": {
+          "name": "深灰餐区地面",
+          "color": "#66737D"
+        }
+      }
+    }
+  },
+  "prices": {
+    "source": "合成示例价目表",
+    "date": "2026-11-12",
+    "unit_prices": {
+      "storage": 920,
+      "sofa": 2200,
+      "coffee_table": 430,
+      "flooring_m2": 115
+    }
+  }
+}

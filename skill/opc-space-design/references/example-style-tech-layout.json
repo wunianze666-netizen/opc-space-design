@@ -1,0 +1,43 @@
+[
+  {
+    "strategy": "focus",
+    "placements": [
+      {
+        "type": "storage",
+        "x": 3820,
+        "y": 120,
+        "angle": 180
+      },
+      {
+        "type": "lounge",
+        "x": 362,
+        "y": 1412,
+        "angle": 90
+      },
+      {
+        "type": "furniture_1",
+        "x": 3512,
+        "y": 5388,
+        "angle": 0
+      },
+      {
+        "type": "furniture_2",
+        "x": 3862,
+        "y": 2400,
+        "angle": 90
+      },
+      {
+        "type": "furniture_3",
+        "x": 100,
+        "y": 5220,
+        "angle": 90
+      },
+      {
+        "type": "furniture_4",
+        "x": 7950,
+        "y": 3480,
+        "angle": 0
+      }
+    ]
+  }
+]

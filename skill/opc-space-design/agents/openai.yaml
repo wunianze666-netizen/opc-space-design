@@ -1,0 +1,4 @@
+interface:
+  display_name: "OPC 空间设计"
+  short_description: "听懂空间需求，讨论设计方向、推荐布局并生成可核查的图纸与清单"
+  default_prompt: "用 $opc-space-design 根据我描述的需求和这份平面图，给出推荐的设计方向和布局方案。"
